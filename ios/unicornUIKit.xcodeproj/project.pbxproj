@@ -20,6 +20,11 @@
 		A43C38791FC98108A822F84A /* libPods-unicornUIKit-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E03640794AA2CF05077A233 /* libPods-unicornUIKit-tvOS.a */; };
 		D326CDBB943B57969D49515A /* libPods-unicornUIKit-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C610512CA7A221A76011D4CB /* libPods-unicornUIKit-tvOSTests.a */; };
 		FBB6B2F53F912FCE11F639C0 /* libPods-unicornUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5E68581F9D4115EB411582 /* libPods-unicornUIKit.a */; };
+		45C2416DF886477D80CB3582 /* 3270Narrow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CEC6C66D67D46099989FC41 /* 3270Narrow.ttf */; };
+		FA120E3620654E07B95DBAEA /* etna-free-font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 39660726B7E744FF8B3BBA67 /* etna-free-font.otf */; };
+		631241079F504F6183C7EDFF /* IBM-Logo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F67381EC26F4ECC87FA8F79 /* IBM-Logo.ttf */; };
+		C962CC4AE4B447578394AA88 /* KLMN_Flash_Pix.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F093ACC0DA39449D8D7A78F1 /* KLMN_Flash_Pix.ttf */; };
+		7D707D639ED24C27BAB76481 /* TheDolbak-Brush.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E303ABEC169E429CA0392770 /* TheDolbak-Brush.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		E44C596E8544EE8A22E9B449 /* libPods-unicornUIKit-unicornUIKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unicornUIKit-unicornUIKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		9CEC6C66D67D46099989FC41 /* 3270Narrow.ttf */ = {isa = PBXFileReference; name = "3270Narrow.ttf"; path = "../assets/fonts/3270Narrow.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		39660726B7E744FF8B3BBA67 /* etna-free-font.otf */ = {isa = PBXFileReference; name = "etna-free-font.otf"; path = "../assets/fonts/etna-free-font.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0F67381EC26F4ECC87FA8F79 /* IBM-Logo.ttf */ = {isa = PBXFileReference; name = "IBM-Logo.ttf"; path = "../assets/fonts/IBM-Logo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F093ACC0DA39449D8D7A78F1 /* KLMN_Flash_Pix.ttf */ = {isa = PBXFileReference; name = "KLMN_Flash_Pix.ttf"; path = "../assets/fonts/KLMN_Flash_Pix.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E303ABEC169E429CA0392770 /* TheDolbak-Brush.ttf */ = {isa = PBXFileReference; name = "TheDolbak-Brush.ttf"; path = "../assets/fonts/TheDolbak-Brush.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +175,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				FACACAC61D81E02CE8270F12 /* Pods */,
+				984AB850443246B2BB955387 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +208,19 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		984AB850443246B2BB955387 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				9CEC6C66D67D46099989FC41 /* 3270Narrow.ttf */,
+				39660726B7E744FF8B3BBA67 /* etna-free-font.otf */,
+				0F67381EC26F4ECC87FA8F79 /* IBM-Logo.ttf */,
+				F093ACC0DA39449D8D7A78F1 /* KLMN_Flash_Pix.ttf */,
+				E303ABEC169E429CA0392770 /* TheDolbak-Brush.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -340,6 +364,11 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				45C2416DF886477D80CB3582 /* 3270Narrow.ttf in Resources */,
+				FA120E3620654E07B95DBAEA /* etna-free-font.otf in Resources */,
+				631241079F504F6183C7EDFF /* IBM-Logo.ttf in Resources */,
+				C962CC4AE4B447578394AA88 /* KLMN_Flash_Pix.ttf in Resources */,
+				7D707D639ED24C27BAB76481 /* TheDolbak-Brush.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
