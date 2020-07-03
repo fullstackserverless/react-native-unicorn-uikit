@@ -21,7 +21,8 @@ import {
   Star,
   TabDeveloper,
   TabCompany,
-  Input
+  Input,
+  Header
 } from './components'
 import { black, white } from './components/constants'
 
@@ -44,6 +45,15 @@ const UIKit = () => {
       <ScrollView
         style={[scrollView, { backgroundColor: dark ? black : white }]}
       >
+        <View style={{ alignItems: 'center' }}>
+          <Txt h0 title="Headers" />
+          <Space height={30} />
+          <Header iconLeft="angle-dobule-left" />
+          <Space height={30} />
+          {/* <HeaderMaster user={userData} /> */}
+          <Space height={90} />
+        </View>
+
         <View style={{ alignItems: 'center' }}>
           <Txt h0 title="Inputs" />
           <Space height={30} />

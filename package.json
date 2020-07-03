@@ -11,6 +11,7 @@
   },
   "precommit": "lint",
   "dependencies": {
+    "@react-native-community/toolbar-android": "^0.1.0-rc.2",
     "@react-navigation/native": "^5.6.1",
     "@react-navigation/native-stack": "^5.0.5",
     "faker": "^4.1.0",
@@ -24,6 +25,7 @@
     "react-native-screens": "^2.9.0",
     "react-native-size-matters": "^0.3.0",
     "react-native-spinkit": "^1.5.0",
+    "react-native-vector-icons": "^6.7.0",
     "yup": "^0.29.1"
   },
   "devDependencies": {
@@ -33,6 +35,7 @@
     "@types/faker": "^4.1.12",
     "@types/jest": "^24.0.24",
     "@types/react-native": "^0.62.0",
+    "@types/react-native-vector-icons": "^6.4.5",
     "@types/react-test-renderer": "16.9.2",
     "@types/yup": "^0.29.3",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
