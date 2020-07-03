@@ -8,7 +8,8 @@ import {
   Txt,
   Space,
   ButtonStatusIssue,
-  ButtonCircle
+  ButtonCircle,
+  ButtonText
 } from './components'
 import { black } from './components/constants'
 
@@ -38,6 +39,8 @@ const UIKit = () => {
           <ButtonStatusIssue title={`Closed ${34}`} />
           <Space height={30} />
           <ButtonCircle title="Press me" />
+          <Space height={30} />
+          <ButtonText title="forgot password?" />
           <Space height={30} />
         </View>
 
