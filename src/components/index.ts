@@ -1,4 +1,5 @@
 export * from './Avatar'
 export * from './Button'
+export * from './ButtonStatusIssue'
 export * from './Txt'
 export * from './Space'

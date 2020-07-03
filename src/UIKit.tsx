@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, ScrollView, View } from 'react-native'
 import faker from 'faker'
 import { useTheme } from '@react-navigation/native'
-import { Avatar, Button, Txt, Space } from './components'
+import { Avatar, Button, Txt, Space, ButtonStatusIssue } from './components'
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -27,7 +27,11 @@ const UIKit = () => {
           <Button title="Done" onPress={_onPress} />
           <Space height={20} />
           <Button title="Cancel" cancel />
-          <Space height={50} />
+          <Space height={30} />
+          <ButtonStatusIssue title={`Open ${34}`} open />
+          <Space height={30} />
+          <ButtonStatusIssue title={`Closed ${34}`} />
+          <Space height={30} />
         </View>
 
         <View style={{ alignItems: 'center' }}>
@@ -55,6 +59,7 @@ const UIKit = () => {
           <Txt h8 title="H8" />
           <Txt body title="body" />
         </View>
+        <Space height={300} />
       </ScrollView>
     </>
   )

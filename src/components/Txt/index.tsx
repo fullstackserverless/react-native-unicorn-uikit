@@ -131,6 +131,14 @@ const styles = ScaledSheet.create({
     fontFamily: '3270Narrow',
     color: primary
   },
+  h9Style: {
+    fontSize: Platform.OS === 'ios' ? '16@s' : '16@s',
+    fontFamily: '3270Narrow'
+  },
+  h9StyleDark: {
+    fontSize: Platform.OS === 'ios' ? '16@s' : '16@s',
+    fontFamily: '3270Narrow'
+  },
   bodyStyle: {
     textAlign: 'left',
     ...ifIphoneX(
@@ -170,6 +178,7 @@ interface TxtT {
   h6?: boolean
   h7?: boolean
   h8?: boolean
+  h9?: boolean
   body?: boolean
   title: string
   numberOfLines?: number
@@ -188,6 +197,7 @@ const Txt = memo<TxtT>(
     h6,
     h7,
     h8,
+    h9,
     body,
     title,
     textStyle,
@@ -205,6 +215,7 @@ const Txt = memo<TxtT>(
       h6Style,
       h7Style,
       h8Style,
+      h9Style,
       bodyStyle,
       h0StyleDark,
       h1StyleDark,
@@ -215,6 +226,7 @@ const Txt = memo<TxtT>(
       h6StyleDark,
       h7StyleDark,
       h8StyleDark,
+      h9StyleDark,
       bodyStyleDark
     } = styles
     return (
@@ -232,6 +244,7 @@ const Txt = memo<TxtT>(
           h6 && StyleSheet.flatten([dark ? h6StyleDark : h6Style]),
           h7 && StyleSheet.flatten([dark ? h7StyleDark : h7Style]),
           h8 && StyleSheet.flatten([dark ? h8StyleDark : h8Style]),
+          h9 && StyleSheet.flatten([dark ? h9StyleDark : h9Style]),
           body && StyleSheet.flatten([dark ? bodyStyleDark : bodyStyle])
         ]}
       >

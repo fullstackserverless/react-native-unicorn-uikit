@@ -3,6 +3,7 @@ import { Dimensions, Platform } from 'react-native'
 export const primary = '#50E3C2'
 export const secondary = '#ff06f4'
 export const gray = '#949494'
+export const white = '#ffffff'
 
 export const win = Dimensions.get('window')
 export const W = win.width
