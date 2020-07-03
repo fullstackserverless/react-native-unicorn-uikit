@@ -13,12 +13,12 @@ const styles = StyleSheet.create({
 const UIKit = () => {
   const { scrollView } = styles
   const {
-    colors: { backgroundColor }
+    colors: { background }
   } = useTheme()
   const _onPress = () => console.log('click') // eslint-disable-line
   return (
     <>
-      <ScrollView style={[scrollView, { backgroundColor }]}>
+      <ScrollView style={[scrollView, { backgroundColor: background }]}>
         <View style={{ alignItems: 'center' }}>
           <Txt h0 title="H0" />
           <Txt h1 title="H1" />
