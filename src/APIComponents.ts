@@ -14,7 +14,7 @@ const DarkTheme = {
 const LightTheme = {
   dark: false,
   colors: {
-    primary: '#50E3C2',
+    primary: '#ff06f4',
     background: '#ffffff',
     card: '#1D1E1F',
     text: '#ffffff',

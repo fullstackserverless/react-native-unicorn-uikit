@@ -1,7 +1,8 @@
 import React from 'react'
 import { StyleSheet, ScrollView, View } from 'react-native'
+import faker from 'faker'
 import { useTheme } from '@react-navigation/native'
-import { Txt } from './components'
+import { Avatar, Button, Txt, Space } from './components'
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -16,9 +17,32 @@ const UIKit = () => {
     colors: { background }
   } = useTheme()
   const _onPress = () => console.log('click') // eslint-disable-line
+  const { image, name, lorem, random } = faker
   return (
     <>
       <ScrollView style={[scrollView, { backgroundColor: background }]}>
+        <View style={{ alignItems: 'center' }}>
+          <Txt h0 title="Buttons" />
+          <Space height={30} />
+          <Button title="Done" onPress={_onPress} />
+          <Space height={20} />
+          <Button title="Cancel" cancel />
+          <Space height={50} />
+        </View>
+
+        <View style={{ alignItems: 'center' }}>
+          <Txt h0 title="Avatars" />
+          <Space height={30} />
+          <Avatar uri={image.avatar()} size="xLarge" />
+          <Space height={20} />
+          <Avatar uri={image.avatar()} size="large" />
+          <Space height={20} />
+          <Avatar uri={image.avatar()} size="medium" />
+          <Space height={20} />
+          <Avatar uri={image.avatar()} size="small" />
+          <Space height={90} />
+        </View>
+
         <View style={{ alignItems: 'center' }}>
           <Txt h0 title="H0" />
           <Txt h1 title="H1" />
