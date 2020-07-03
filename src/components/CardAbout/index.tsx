@@ -1,6 +1,5 @@
 import React, { memo } from 'react'
 import { CardBorder } from '../CardBorder'
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import { Txt } from '../Txt'
 
 interface CardT {

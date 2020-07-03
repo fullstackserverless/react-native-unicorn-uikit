@@ -8,7 +8,7 @@ import {
   TouchableOpacity
 } from 'react-native'
 import { W } from '../constants'
-import { Txt } from '..'
+import { Txt } from '../Txt'
 import { primary, secondary } from '../constants'
 
 const styles = StyleSheet.create({

@@ -1,5 +1,12 @@
 import React, { memo } from 'react'
-import { Platform, StyleProp, TextStyle, Text, StyleSheet } from 'react-native'
+import {
+  Platform,
+  StyleProp,
+  TextStyle,
+  ViewStyle,
+  Text,
+  StyleSheet
+} from 'react-native'
 import { useTheme } from '@react-navigation/native'
 import { ScaledSheet } from 'react-native-size-matters'
 import { ifIphoneX } from 'react-native-iphone-x-helper'
@@ -192,6 +199,7 @@ interface TxtT {
   numberOfLines?: number
   ellipsizeMode?: 'head' | 'middle' | 'tail' | 'clip'
   textStyle?: StyleProp<TextStyle>
+  viewStyle?: StyleProp<ViewStyle>
 }
 
 const Txt = memo<TxtT>(

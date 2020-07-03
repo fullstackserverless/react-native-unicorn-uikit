@@ -7,7 +7,7 @@ import {
   TouchableOpacity
 } from 'react-native'
 import { useTheme } from '@react-navigation/native'
-import { Txt } from '..'
+import { Txt } from '../Txt'
 import { white, black, primary, secondary } from '../constants'
 
 const styles = StyleSheet.create({

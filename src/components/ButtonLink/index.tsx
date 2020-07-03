@@ -2,14 +2,10 @@ import React, { memo } from 'react'
 import {
   StyleSheet,
   StyleProp,
-  TextStyle,
   ViewStyle,
-  Platform,
-  TouchableOpacity,
-  Text
+  TouchableOpacity
 } from 'react-native'
-import { useTheme } from '@react-navigation/native'
-import { Txt } from '..'
+import { Txt } from '../Txt'
 
 const styles = StyleSheet.create({
   container: {

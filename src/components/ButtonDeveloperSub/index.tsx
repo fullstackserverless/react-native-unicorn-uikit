@@ -9,7 +9,6 @@ import {
 } from 'react-native'
 import { Txt } from '../Txt'
 import { ButtonRate } from '../ButtonRate'
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import { Avatar } from '../Avatar'
 import { W } from '../constants'
 
@@ -32,8 +31,8 @@ const styles = StyleSheet.create({
 
 interface ButtonDeveloperSubT {
   title: string
-  uri?: string
-  rate?: string
+  uri: string
+  rate: string
   textStyle?: StyleProp<TextStyle>
   viewStyle?: StyleProp<ViewStyle>
   onPress?: () => void

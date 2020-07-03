@@ -8,7 +8,7 @@ import {
   View
 } from 'react-native'
 import Emoji from 'react-native-emoji'
-import { Txt } from '..'
+import { Txt } from '../Txt'
 
 const styles = StyleSheet.create({
   container: {
