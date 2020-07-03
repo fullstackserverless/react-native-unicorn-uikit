@@ -4,6 +4,9 @@ export const primary = '#50E3C2'
 export const secondary = '#ff06f4'
 export const gray = '#949494'
 export const white = '#ffffff'
+export const black = '#17191A'
+export const dimGray = '#707070'
+export const lightGray = '#D1CDCD'
 
 export const win = Dimensions.get('window')
 export const W = win.width

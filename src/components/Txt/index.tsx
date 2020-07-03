@@ -3,7 +3,16 @@ import { Platform, StyleProp, TextStyle, Text, StyleSheet } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 import { ScaledSheet } from 'react-native-size-matters'
 import { ifIphoneX } from 'react-native-iphone-x-helper'
-import { W, primary, secondary, gray } from '../constants'
+import {
+  W,
+  white,
+  black,
+  primary,
+  secondary,
+  gray,
+  dimGray,
+  lightGray
+} from '../constants'
 
 const KLMN = Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix'
 const Dolbak = Platform.OS === 'ios' ? 'The Dolbak' : 'TheDolbak-Brush'
@@ -26,7 +35,7 @@ const styles = ScaledSheet.create({
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 1,
     textShadowColor: secondary,
-    color: '#1D1E1F'
+    color: black
   },
   h1StyleDark: {
     fontSize: Platform.OS === 'ios' ? '15@s' : '20@s',
@@ -34,7 +43,7 @@ const styles = ScaledSheet.create({
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 1,
     textShadowColor: primary,
-    color: '#ffffff'
+    color: white
   },
   h2Style: {
     fontSize: Platform.OS === 'ios' ? '25@s' : '30@s',
@@ -42,7 +51,7 @@ const styles = ScaledSheet.create({
     textShadowOffset: { width: 2, height: 1 },
     textShadowRadius: 1,
     textShadowColor: secondary,
-    color: '#1D1E1F'
+    color: black
   },
   h2StyleDark: {
     fontSize: Platform.OS === 'ios' ? '25@s' : '30@s',
@@ -50,7 +59,7 @@ const styles = ScaledSheet.create({
     textShadowOffset: { width: 2, height: 1 },
     textShadowRadius: 1,
     textShadowColor: primary,
-    color: '#ffffff'
+    color: white
   },
   h3Style: {
     fontSize: Platform.OS === 'ios' ? '15@s' : '15@s',
@@ -58,7 +67,7 @@ const styles = ScaledSheet.create({
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 1,
     textShadowColor: secondary,
-    color: '#1D1E1F'
+    color: black
   },
   h3StyleDark: {
     fontSize: Platform.OS === 'ios' ? '15@s' : '15@s',
@@ -66,31 +75,31 @@ const styles = ScaledSheet.create({
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 1,
     textShadowColor: primary,
-    color: '#ffffff'
+    color: white
   },
   h4Style: {
     fontSize: Platform.OS === 'ios' ? '23@s' : '23@s',
     fontFamily: 'Avenir Next',
     fontWeight: 'bold',
-    color: '#707070'
+    color: dimGray
   },
   h4StyleDark: {
     fontSize: Platform.OS === 'ios' ? '23@s' : '23@s',
     fontFamily: 'Avenir Next',
     fontWeight: 'bold',
-    color: '#707070'
+    color: dimGray
   },
   h5Style: {
     fontSize: Platform.OS === 'ios' ? '25@s' : '30@s',
     fontFamily: 'Avenir Next',
     fontWeight: 'bold',
-    color: '#D1CDCD'
+    color: lightGray
   },
   h5StyleDark: {
     fontSize: Platform.OS === 'ios' ? '25@s' : '30@s',
     fontFamily: 'Avenir Next',
     fontWeight: 'bold',
-    color: '#D1CDCD'
+    color: lightGray
   },
   h6Style: {
     fontSize: Platform.OS === 'ios' ? '13@s' : '13@s',
@@ -99,7 +108,7 @@ const styles = ScaledSheet.create({
     textAlign: 'center',
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 1,
-    color: '#1D1E1F'
+    color: black
   },
   h6StyleDark: {
     fontSize: Platform.OS === 'ios' ? '13@s' : '13@s',
@@ -109,17 +118,17 @@ const styles = ScaledSheet.create({
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 1,
     textShadowColor: primary,
-    color: '#ffffff'
+    color: white
   },
   h7Style: {
     fontSize: Platform.OS === 'ios' ? '12@s' : '12@s',
     fontFamily: KLMN,
-    color: '#1D1E1F'
+    color: black
   },
   h7StyleDark: {
     fontSize: Platform.OS === 'ios' ? '12@s' : '12@s',
     fontFamily: KLMN,
-    color: '#ffffff'
+    color: white
   },
   h8Style: {
     fontSize: Platform.OS === 'ios' ? '16@s' : '16@s',

@@ -4,6 +4,7 @@ import { AppearanceProvider } from 'react-native-appearance'
 import { NavigationContainer, useTheme } from '@react-navigation/native'
 import AppNavigator from './AppNavigator'
 import { DarkTheme, LightTheme } from './APIComponents'
+import { black, white } from './components/constants'
 
 //window.LOG_LEVEL = 'DEBUG'
 
@@ -11,7 +12,7 @@ const App = () => {
   const [value, setValue] = useState<boolean>(!false)
   //const scheme = useColorScheme()
   const {
-    colors: { backgroundColor }
+    colors: { background }
   } = useTheme()
   const dev = true
   return (
@@ -20,12 +21,12 @@ const App = () => {
         <NavigationContainer theme={value ? DarkTheme : LightTheme}>
           <StatusBar
             barStyle={value ? 'light-content' : 'dark-content'}
-            backgroundColor={backgroundColor}
+            backgroundColor={background}
           />
           {dev && (
             <View
               style={{
-                backgroundColor: value ? '#1D1E1F' : '#fff',
+                backgroundColor: value ? black : white,
                 height: 90
               }}
             >
