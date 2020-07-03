@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, ScrollView, View } from 'react-native'
 import faker from 'faker'
 import { useTheme } from '@react-navigation/native'
@@ -8,13 +8,15 @@ import {
   Txt,
   Space,
   ButtonStatusIssue,
+  ButtonRate,
   ButtonCircle,
   ButtonText,
   ButtonLink,
   ButtonMarkDecision,
   ButtonIconCircle,
   ButtonComments,
-  ButtonDeveloperSub
+  ButtonDeveloperSub,
+  Star
 } from './components'
 import { black, white } from './components/constants'
 
@@ -26,6 +28,7 @@ const styles = StyleSheet.create({
 })
 
 const UIKit = () => {
+  const [bool, setBool] = useState(false)
   const { scrollView } = styles
   const _onPress = () => console.log('click') // eslint-disable-line
   const { image, name, lorem, random } = faker
@@ -65,12 +68,16 @@ const UIKit = () => {
           <Space height={30} />
           <ButtonComments title="3" />
           <Space height={30} />
+          <ButtonRate title="2/433" />
+          <Space height={30} />
           <ButtonDeveloperSub
             title={name.findName()}
             uri={image.avatar()}
-            rate={random.number()}
+            rate={String(random.number())}
           />
           <Space height={30} />
+          <Star star={bool} onPress={() => setBool(!bool)} />
+          <Space height={90} />
         </View>
 
         <View style={{ alignItems: 'center' }}>

@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
 })
 
 interface ButtonRateT {
-  title: number
+  title: string
   viewStyle?: StyleProp<ViewStyle>
   onPress?: () => void
 }

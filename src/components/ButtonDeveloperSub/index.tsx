@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
 interface ButtonDeveloperSubT {
   title: string
   uri?: string
-  rate?: number
+  rate?: string
   textStyle?: StyleProp<TextStyle>
   viewStyle?: StyleProp<ViewStyle>
   onPress?: () => void
