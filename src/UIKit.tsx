@@ -10,9 +10,10 @@ import {
   ButtonStatusIssue,
   ButtonCircle,
   ButtonText,
-  ButtonLink
+  ButtonLink,
+  ButtonMarkDecision
 } from './components'
-import { black } from './components/constants'
+import { black, white } from './components/constants'
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -25,9 +26,13 @@ const UIKit = () => {
   const { scrollView } = styles
   const _onPress = () => console.log('click') // eslint-disable-line
   const { image, name, lorem, random } = faker
+  const { dark } = useTheme()
+  const dev = true
   return (
     <>
-      <ScrollView style={[scrollView, { backgroundColor: black }]}>
+      <ScrollView
+        style={[scrollView, { backgroundColor: dark ? black : white }]}
+      >
         <View style={{ alignItems: 'center' }}>
           <Txt h0 title="Buttons" />
           <Space height={30} />
@@ -44,6 +49,8 @@ const UIKit = () => {
           <ButtonText title="forgot password?" />
           <Space height={30} />
           <ButtonLink title="link" />
+          <Space height={30} />
+          <ButtonMarkDecision />
           <Space height={30} />
         </View>
 

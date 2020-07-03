@@ -12,6 +12,7 @@ const App = () => {
   const [value, setValue] = useState<boolean>(!false)
   //const scheme = useColorScheme()
   const {
+    dark,
     colors: { background }
   } = useTheme()
   const dev = true
@@ -19,10 +20,7 @@ const App = () => {
     <>
       <AppearanceProvider>
         <NavigationContainer theme={value ? DarkTheme : LightTheme}>
-          <StatusBar
-            barStyle={value ? 'light-content' : 'dark-content'}
-            backgroundColor={background}
-          />
+          <StatusBar barStyle={value ? 'light-content' : 'dark-content'} />
           {dev && (
             <View
               style={{
