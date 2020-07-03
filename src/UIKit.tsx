@@ -13,7 +13,8 @@ import {
   ButtonLink,
   ButtonMarkDecision,
   ButtonIconCircle,
-  ButtonComments
+  ButtonComments,
+  ButtonDeveloperSub
 } from './components'
 import { black, white } from './components/constants'
 
@@ -62,7 +63,13 @@ const UIKit = () => {
           <Space height={10} />
           <ButtonIconCircle name=":thought_balloon:" />
           <Space height={30} />
-          <ButtonComments title={3} />
+          <ButtonComments title="3" />
+          <Space height={30} />
+          <ButtonDeveloperSub
+            title={name.findName()}
+            uri={image.avatar()}
+            rate={random.number()}
+          />
           <Space height={30} />
         </View>
 
