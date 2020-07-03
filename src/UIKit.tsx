@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { StyleSheet, ScrollView, View } from 'react-native'
 import faker from 'faker'
 import { useTheme } from '@react-navigation/native'
+import { Formik } from 'formik'
+import * as Yup from 'yup'
 import {
   Avatar,
   Button,
@@ -18,7 +20,8 @@ import {
   ButtonDeveloperSub,
   Star,
   TabDeveloper,
-  TabCompany
+  TabCompany,
+  Input
 } from './components'
 import { black, white } from './components/constants'
 
@@ -41,6 +44,57 @@ const UIKit = () => {
       <ScrollView
         style={[scrollView, { backgroundColor: dark ? black : white }]}
       >
+        <View style={{ alignItems: 'center' }}>
+          <Txt h0 title="Inputs" />
+          <Space height={30} />
+          <Formik
+            initialValues={{ email: '', password: '' }}
+            onSubmit={(values) => Alert.alert(JSON.stringify(values))}
+            validationSchema={Yup.object().shape({
+              email: Yup.string().email().required(),
+              password: Yup.string().min(6).required()
+            })}
+          >
+            {({
+              values,
+              handleChange,
+              errors,
+              setFieldTouched,
+              touched,
+              isValid,
+              handleSubmit
+            }) => (
+              <>
+                <Input
+                  name="email"
+                  value={values.email}
+                  onChangeText={handleChange('email')}
+                  onBlur={() => setFieldTouched('email')}
+                  placeholder="E-mail"
+                  touched={touched}
+                  errors={errors}
+                />
+                <Input
+                  name="password"
+                  value={values.password}
+                  onChangeText={handleChange('password')}
+                  onBlur={() => setFieldTouched('password')}
+                  placeholder="Password"
+                  touched={touched}
+                  errors={errors}
+                />
+                <Space height={40} />
+                <Button
+                  title="Sign In"
+                  disabled={!isValid}
+                  onPress={handleSubmit}
+                />
+              </>
+            )}
+          </Formik>
+          <Space height={90} />
+        </View>
+
         <View style={{ alignItems: 'center' }}>
           <Txt h0 title="Tabs" />
           <Space height={30} />

@@ -11,12 +11,12 @@ import {
   secondary,
   gray,
   dimGray,
-  lightGray
+  lightGray,
+  Etna,
+  KLMN,
+  Dolbak,
+  Narrow
 } from '../constants'
-
-const KLMN = Platform.OS === 'ios' ? 'KLMN-Flash-Pix' : 'KLMN_Flash_Pix'
-const Dolbak = Platform.OS === 'ios' ? 'The Dolbak' : 'TheDolbak-Brush'
-const Etna = Platform.OS === 'ios' ? 'Etna' : 'etna-free-font'
 
 const styles = ScaledSheet.create({
   h0Style: {
@@ -132,21 +132,21 @@ const styles = ScaledSheet.create({
   },
   h8Style: {
     fontSize: Platform.OS === 'ios' ? '16@s' : '16@s',
-    fontFamily: '3270Narrow',
+    fontFamily: Narrow,
     color: secondary
   },
   h8StyleDark: {
     fontSize: Platform.OS === 'ios' ? '16@s' : '16@s',
-    fontFamily: '3270Narrow',
+    fontFamily: Narrow,
     color: primary
   },
   h9Style: {
     fontSize: Platform.OS === 'ios' ? '16@s' : '16@s',
-    fontFamily: '3270Narrow'
+    fontFamily: Narrow
   },
   h9StyleDark: {
     fontSize: Platform.OS === 'ios' ? '16@s' : '16@s',
-    fontFamily: '3270Narrow'
+    fontFamily: Narrow
   },
   bodyStyle: {
     textAlign: 'left',
