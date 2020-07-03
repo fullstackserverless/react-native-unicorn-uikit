@@ -9,7 +9,8 @@ import {
   Space,
   ButtonStatusIssue,
   ButtonCircle,
-  ButtonText
+  ButtonText,
+  ButtonLink
 } from './components'
 import { black } from './components/constants'
 
@@ -41,6 +42,8 @@ const UIKit = () => {
           <ButtonCircle title="Press me" />
           <Space height={30} />
           <ButtonText title="forgot password?" />
+          <Space height={30} />
+          <ButtonLink title="link" />
           <Space height={30} />
         </View>
 
