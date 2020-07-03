@@ -12,7 +12,8 @@ import {
   ButtonText,
   ButtonLink,
   ButtonMarkDecision,
-  ButtonIconCircle
+  ButtonIconCircle,
+  ButtonComments
 } from './components'
 import { black, white } from './components/constants'
 
@@ -60,6 +61,8 @@ const UIKit = () => {
           <ButtonIconCircle name=":loud_sound:" />
           <Space height={10} />
           <ButtonIconCircle name=":thought_balloon:" />
+          <Space height={30} />
+          <ButtonComments title={3} />
           <Space height={30} />
         </View>
 
