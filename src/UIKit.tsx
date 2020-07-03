@@ -34,7 +34,8 @@ import {
   CardContacts,
   CardCareer,
   CardEducation,
-  CardAbout
+  CardAbout,
+  TextError
 } from './components'
 import { black, white } from './components/constants'
 import {
@@ -78,20 +79,34 @@ const UIKit = () => {
           <Avatar uri={image.avatar()} size="medium" />
           <Space height={20} />
           <Avatar uri={image.avatar()} size="small" />
-          <Space height={90} />
+          <Space height={60} />
         </View>
 
         <View style={{ alignItems: 'center' }}>
+          <Txt h0 title="Fonts" />
+          <Space height={5} />
           <Txt h0 title="H0" />
+          <Space height={5} />
           <Txt h1 title="H1" />
+          <Space height={5} />
           <Txt h2 title="H2" />
+          <Space height={5} />
           <Txt h3 title="H3" />
+          <Space height={5} />
           <Txt h4 title="H4" />
+          <Space height={5} />
           <Txt h5 title="H5" />
+          <Space height={5} />
           <Txt h6 title="H6" />
+          <Space height={5} />
           <Txt h7 title="H7" />
+          <Space height={5} />
           <Txt h8 title="H8" />
+          <Space height={5} />
           <Txt body title="body" />
+          <Space height={5} />
+          <TextError title="text error" />
+          <Space height={60} />
         </View>
 
         <View style={{ alignItems: 'center' }}>
