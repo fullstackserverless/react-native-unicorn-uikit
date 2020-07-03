@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, ScrollView, View } from 'react-native'
+import { StyleSheet, ScrollView, View, Alert } from 'react-native'
 import faker from 'faker'
 import { useTheme } from '@react-navigation/native'
 import { Formik } from 'formik'
@@ -22,9 +22,21 @@ import {
   TabDeveloper,
   TabCompany,
   Input,
-  Header
+  Header,
+  HeaderMaster
 } from './components'
 import { black, white } from './components/constants'
+import {
+  userData,
+  cardCareer,
+  cardContacts,
+  cardEducation,
+  cardIssueResponce,
+  cardVacancies,
+  cardIssue,
+  cardResume,
+  cardInfo
+} from './data'
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -50,7 +62,7 @@ const UIKit = () => {
           <Space height={30} />
           <Header iconLeft="angle-dobule-left" />
           <Space height={30} />
-          {/* <HeaderMaster user={userData} /> */}
+          <HeaderMaster user={userData} />
           <Space height={90} />
         </View>
 
