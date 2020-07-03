@@ -152,10 +152,10 @@ const styles = ScaledSheet.create({
     textAlign: 'left',
     ...ifIphoneX(
       {
-        fontSize: Platform.OS === 'ios' ? '19@s' : '17@s'
+        fontSize: Platform.OS === 'ios' ? '13@s' : '17@s'
       },
       {
-        fontSize: Platform.OS === 'ios' ? '12@s' : '17@s'
+        fontSize: Platform.OS === 'ios' ? '13@s' : '17@s'
       }
     ),
     fontFamily: KLMN,
@@ -165,13 +165,12 @@ const styles = ScaledSheet.create({
     textAlign: 'left',
     ...ifIphoneX(
       {
-        fontSize: Platform.OS === 'ios' ? 19 : 17
+        fontSize: Platform.OS === 'ios' ? '13@s' : '15@s'
       },
       {
-        fontSize: Platform.OS === 'ios' ? 12 : 17
+        fontSize: Platform.OS === 'ios' ? '13@s' : '15@s'
       }
     ),
-    fontSize: Platform.OS === 'ios' ? '16@s' : '16@s',
     fontFamily: KLMN,
     color: gray
   }

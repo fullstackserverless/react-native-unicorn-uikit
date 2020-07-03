@@ -23,7 +23,18 @@ import {
   TabCompany,
   Input,
   Header,
-  HeaderMaster
+  HeaderMaster,
+  Developer,
+  CardInfo,
+  CardVacancies,
+  CardResume,
+  CardIssue,
+  CardIssueResponce,
+  CardIssueResponceSub,
+  CardContacts,
+  CardCareer,
+  CardEducation,
+  CardAbout
 } from './components'
 import { black, white } from './components/constants'
 import {
@@ -58,11 +69,69 @@ const UIKit = () => {
         style={[scrollView, { backgroundColor: dark ? black : white }]}
       >
         <View style={{ alignItems: 'center' }}>
-          <Txt h0 title="Headers" />
+          <Txt h0 title="Avatars" />
           <Space height={30} />
-          <Header iconLeft="angle-dobule-left" />
+          <Avatar uri={image.avatar()} size="xLarge" />
+          <Space height={20} />
+          <Avatar uri={image.avatar()} size="large" />
+          <Space height={20} />
+          <Avatar uri={image.avatar()} size="medium" />
+          <Space height={20} />
+          <Avatar uri={image.avatar()} size="small" />
+          <Space height={90} />
+        </View>
+
+        <View style={{ alignItems: 'center' }}>
+          <Txt h0 title="H0" />
+          <Txt h1 title="H1" />
+          <Txt h2 title="H2" />
+          <Txt h3 title="H3" />
+          <Txt h4 title="H4" />
+          <Txt h5 title="H5" />
+          <Txt h6 title="H6" />
+          <Txt h7 title="H7" />
+          <Txt h8 title="H8" />
+          <Txt body title="body" />
+        </View>
+
+        <View style={{ alignItems: 'center' }}>
+          <Txt h0 title="Buttons" />
           <Space height={30} />
-          <HeaderMaster user={userData} />
+          <Button title="Done" onPress={_onPress} />
+          <Space height={20} />
+          <Button title="Cancel" cancel />
+          <Space height={30} />
+          <ButtonStatusIssue title={`Open ${34}`} open />
+          <Space height={30} />
+          <ButtonStatusIssue title={`Closed ${34}`} />
+          <Space height={30} />
+          <ButtonCircle title="Press me" />
+          <Space height={30} />
+          <ButtonText title="forgot password?" />
+          <Space height={30} />
+          <ButtonLink title="link" />
+          <Space height={30} />
+          <ButtonMarkDecision />
+          <Space height={30} />
+          <ButtonIconCircle name=":thought_balloon:" />
+          <Space height={10} />
+          <ButtonIconCircle name=":telephone_receiver:" />
+          <Space height={10} />
+          <ButtonIconCircle name=":loud_sound:" />
+          <Space height={10} />
+          <ButtonIconCircle name=":thought_balloon:" />
+          <Space height={30} />
+          <ButtonComments title="3" />
+          <Space height={30} />
+          <ButtonRate title="2/433" />
+          <Space height={30} />
+          <ButtonDeveloperSub
+            title={name.findName()}
+            uri={image.avatar()}
+            rate={String(random.number())}
+          />
+          <Space height={30} />
+          <Star star={bool} onPress={() => setBool(!bool)} />
           <Space height={90} />
         </View>
 
@@ -127,71 +196,43 @@ const UIKit = () => {
         </View>
 
         <View style={{ alignItems: 'center' }}>
-          <Txt h0 title="Buttons" />
+          <Txt h0 title="Headers" />
           <Space height={30} />
-          <Button title="Done" onPress={_onPress} />
-          <Space height={20} />
-          <Button title="Cancel" cancel />
+          <Header iconLeft="angle-dobule-left" />
           <Space height={30} />
-          <ButtonStatusIssue title={`Open ${34}`} open />
-          <Space height={30} />
-          <ButtonStatusIssue title={`Closed ${34}`} />
-          <Space height={30} />
-          <ButtonCircle title="Press me" />
-          <Space height={30} />
-          <ButtonText title="forgot password?" />
-          <Space height={30} />
-          <ButtonLink title="link" />
-          <Space height={30} />
-          <ButtonMarkDecision />
-          <Space height={30} />
-          <ButtonIconCircle name=":thought_balloon:" />
-          <Space height={10} />
-          <ButtonIconCircle name=":telephone_receiver:" />
-          <Space height={10} />
-          <ButtonIconCircle name=":loud_sound:" />
-          <Space height={10} />
-          <ButtonIconCircle name=":thought_balloon:" />
-          <Space height={30} />
-          <ButtonComments title="3" />
-          <Space height={30} />
-          <ButtonRate title="2/433" />
-          <Space height={30} />
-          <ButtonDeveloperSub
-            title={name.findName()}
-            uri={image.avatar()}
-            rate={String(random.number())}
-          />
-          <Space height={30} />
-          <Star star={bool} onPress={() => setBool(!bool)} />
+          <HeaderMaster user={userData} />
           <Space height={90} />
         </View>
 
         <View style={{ alignItems: 'center' }}>
-          <Txt h0 title="Avatars" />
+          <Txt h0 title="Cards" />
           <Space height={30} />
-          <Avatar uri={image.avatar()} size="xLarge" />
-          <Space height={20} />
-          <Avatar uri={image.avatar()} size="large" />
-          <Space height={20} />
-          <Avatar uri={image.avatar()} size="medium" />
-          <Space height={20} />
-          <Avatar uri={image.avatar()} size="small" />
-          <Space height={90} />
+          <Developer title={name.findName()} uri={image.avatar()} rate="1" />
+          <Space height={30} />
+          <CardInfo obj={cardInfo} />
+          <Space height={30} />
+          <CardVacancies obj={cardVacancies} />
+          <Space height={30} />
+          <CardResume obj={cardResume} obj2={cardInfo} />
+          <Space height={30} />
+          <CardResume obj={cardResume} obj2={cardInfo} bool />
+          <Space height={30} />
+          <CardIssue obj={cardIssue} />
+          <Space height={30} />
+          <CardIssueResponce obj={cardIssueResponce} />
+          <Space height={30} />
+          <CardIssueResponceSub obj={cardIssueResponce} />
+          <Space height={30} />
+          <CardContacts obj={cardContacts} />
+          <Space height={30} />
+          <CardCareer obj={cardCareer} />
+          <Space height={30} />
+          <CardEducation obj={cardEducation} />
+          <Space height={30} />
+          <CardAbout title={lorem.paragraph()} />
+          <Space height={60} />
         </View>
 
-        <View style={{ alignItems: 'center' }}>
-          <Txt h0 title="H0" />
-          <Txt h1 title="H1" />
-          <Txt h2 title="H2" />
-          <Txt h3 title="H3" />
-          <Txt h4 title="H4" />
-          <Txt h5 title="H5" />
-          <Txt h6 title="H6" />
-          <Txt h7 title="H7" />
-          <Txt h8 title="H8" />
-          <Txt body title="body" />
-        </View>
         <Space height={300} />
       </ScrollView>
     </>
