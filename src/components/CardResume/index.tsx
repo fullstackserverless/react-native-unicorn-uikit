@@ -16,24 +16,27 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end'
   }
 })
+interface ObjType {
+    title: string;
+    avatar: string;
+    cost: number;
+    rate: number
+}
+interface ObjType2 {
+    position: string;
+    language: string;
+    stack: string;
+    experience: string;
+    salary: number
+}
 
 interface CardResumeT {
-  obj?: {
-    title: string
-    avatar: string
-    rate: number
-    cost: number
-  }
-  obj2?: {
-    position: string
-    language: string
-    stack: string
-    experience: string
-  }
+  obj: ObjType;
+  obj2:  ObjType2;
   bool?: boolean
 }
 
-const CardResume = memo<CardResumeT>(({ obj, obj2, bool = false }) => {
+const CardResume = memo(({ obj, obj2, bool = false }: CardResumeT) => {
   const { title, rate, avatar } = obj
   const { starStyle } = styles
   const user = (

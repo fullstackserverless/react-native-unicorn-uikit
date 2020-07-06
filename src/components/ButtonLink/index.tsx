@@ -19,12 +19,12 @@ const styles = StyleSheet.create({
 })
 
 interface ButtonLinkT {
-  title: string
-  viewStyle?: StyleProp<ViewStyle>
+  title: string;
+  viewStyle?: StyleProp<ViewStyle>;
   onPress?: () => void
 }
 
-const ButtonLink = memo<ButtonLinkT>(({ title, viewStyle, onPress }) => {
+const ButtonLink = memo(({ title, viewStyle, onPress }: ButtonLinkT) => {
   const { container, h } = styles
   return (
     <TouchableOpacity onPress={onPress} style={[container, viewStyle]}>

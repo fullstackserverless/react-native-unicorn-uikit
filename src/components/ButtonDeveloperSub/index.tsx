@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo } from 'react';
 import {
   Platform,
   StyleSheet,
@@ -30,16 +30,15 @@ const styles = StyleSheet.create({
 })
 
 interface ButtonDeveloperSubT {
-  title: string
-  uri: string
-  rate: string
-  textStyle?: StyleProp<TextStyle>
-  viewStyle?: StyleProp<ViewStyle>
+  title: string;
+  uri?: string;
+  rate?: string;
+  textStyle?: StyleProp<TextStyle>;
+  viewStyle?: StyleProp<ViewStyle>;
   onPress?: () => void
 }
 
-const ButtonDeveloperSub = memo<ButtonDeveloperSubT>(
-  ({ title, viewStyle, uri, onPress, rate }) => {
+const ButtonDeveloperSub = memo(({ title, viewStyle, uri, onPress, rate }: ButtonDeveloperSubT) => {
     const { container, h, rateStyle } = styles
     return (
       <TouchableOpacity onPress={onPress} style={[container, viewStyle]}>
@@ -55,6 +54,6 @@ const ButtonDeveloperSub = memo<ButtonDeveloperSubT>(
       </TouchableOpacity>
     )
   }
-)
+);
 
 export { ButtonDeveloperSub }

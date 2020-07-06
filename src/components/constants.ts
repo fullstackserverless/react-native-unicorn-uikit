@@ -1,4 +1,6 @@
 import { Dimensions, Platform } from 'react-native'
+import { StackNavigationProp } from '@react-navigation/stack';
+
 
 export const primary = '#50E3C2'
 export const secondary = '#ff06f4'
@@ -17,6 +19,7 @@ export const win = Dimensions.get('window')
 export const W = win.width
 export const H = win.height
 
+
 export const Device = {
   // eslint-disable-next-line
   select(variants) {
@@ -34,7 +37,7 @@ export const Device = {
 
 export const goBack = (navigation) => () => navigation.goBack()
 
-export const onScreen = (screen, navigation, obj) => () => {
+export const onScreen = (screen : string, navigation, obj: object) => () => {
   navigation.navigate(screen, obj)
 }
 

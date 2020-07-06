@@ -4,15 +4,17 @@ import { ButtonLink } from '../ButtonLink'
 import { Txt } from '../Txt'
 import { Space } from '../Space'
 
-interface CardContactsT {
-  obj?: {
-    location: string
-    web: string
-    phone: string
-  }
+interface ObjType {
+  location: string;
+  web: string;
+  phone: string
 }
 
-const CardContacts = memo<CardContactsT>(({ obj }) => {
+interface CardContactsT {
+  obj: ObjType
+}
+
+const CardContacts = memo(({ obj }: CardContactsT) => {
   const { location, web, phone } = obj
   return (
     <>

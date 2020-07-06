@@ -43,14 +43,13 @@ const styles = StyleSheet.create({
 })
 
 interface ButtonIconCircleT {
-  uri?: string
-  name: string
-  onPress?: () => void
+  uri?: string;
+  name: string;
+  onPress?: () => void;
   viewStyle?: StyleProp<ViewStyle>
 }
 
-const ButtonIconCircle = memo<ButtonIconCircleT>(
-  ({ name, onPress, viewStyle }) => {
+const ButtonIconCircle = memo(({ name, onPress, viewStyle }: ButtonIconCircleT) => {
     const { container, pink, blue, iconBg, emoji } = styles
     const { dark } = useTheme()
     const backgroundColor = dark ? black : white

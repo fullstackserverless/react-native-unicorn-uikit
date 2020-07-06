@@ -9,7 +9,11 @@
     "lint-watch": "esw -w --changed src/**",
     "postinstall": "cd ./ios && pod install && cd .."
   },
-  "precommit": "lint",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "@react-native-community/toolbar-android": "^0.1.0-rc.2",
     "@react-navigation/native": "^5.6.1",

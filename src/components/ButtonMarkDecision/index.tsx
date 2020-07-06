@@ -18,7 +18,7 @@ interface ButtonMarkDecisionT {
   onPress?: () => void
 }
 
-const ButtonMarkDecision = memo<ButtonMarkDecisionT>(({ onPress }) => {
+const ButtonMarkDecision = memo(({ onPress }: ButtonMarkDecisionT) => {
   const { container, emoji } = styles
   return (
     <TouchableOpacity onPress={onPress} style={container}>

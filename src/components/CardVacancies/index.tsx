@@ -14,18 +14,20 @@ const styles = StyleSheet.create({
   }
 })
 
+interface ObjType {
+  position: string;
+  description: string;
+  owner: string;
+  rate: number
+}
+
 interface CardVacanciesT {
-  obj?: {
-    position: string
-    description: string
-    owner: string
-    rate: number
-  }
-  onPress?: () => void
+  obj: ObjType;
+  onPress?: () => void;
   detail?: boolean
 }
 
-const CardVacancies = memo<CardVacanciesT>(({ obj, onPress, detail }) => {
+const CardVacancies = memo(({ obj, onPress, detail }: CardVacanciesT) => {
   const { position, description, owner, rate } = obj
   const { container } = styles
   const [star, setStar] = useState(false)
@@ -39,7 +41,8 @@ const CardVacancies = memo<CardVacanciesT>(({ obj, onPress, detail }) => {
             textStyle={{ width: W - 110 }}
             numberOfLines={1}
           />
-          {false && <Star bool={star} onPress={() => setStar(!star)} />}
+          {false &&  <Star bool={star} onPress={() => setStar(!star)} /> }
+
         </View>
         <Space height={20} />
         <TouchableOpacity onPress={onPress}>

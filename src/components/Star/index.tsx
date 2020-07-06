@@ -16,13 +16,14 @@ const styles = StyleSheet.create({
 })
 
 interface StarT {
-  star: boolean
-  imageStyle?: StyleProp<ImageStyle>
-  onPress?: () => void
+  star?: boolean;
+  bool?: boolean;
+  imageStyle?: StyleProp<ImageStyle>;
+  onPress?: () => void;
   viewStyle?: StyleProp<ViewStyle>
 }
 
-const Star = memo<StarT>(({ star = false, onPress, imageStyle, viewStyle }) => {
+const Star = memo(({ star = false, bool, onPress, imageStyle, viewStyle }: StarT) => {
   const { starStyle } = styles
   const source = star
     ? 'https://s3.eu-central-1.wasabisys.com/ghashtag/ImagesForApp/StarActive.png'

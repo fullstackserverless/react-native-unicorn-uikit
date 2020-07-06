@@ -22,14 +22,16 @@ const styles = StyleSheet.create({
   }
 })
 
+interface ObjType {
+  uri: string
+  description: string
+  name: string
+  comments: number
+  rate?: number
+}
+
 interface Props {
-  obj?: {
-    uri: string
-    description: string
-    name: string
-    comments: number
-    rate: number
-  }
+  obj?: ObjType
   onPress?: () => void
 }
 

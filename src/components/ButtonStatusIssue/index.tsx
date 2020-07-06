@@ -30,16 +30,15 @@ const styles = StyleSheet.create({
 })
 
 interface ButtonStatusIssueT {
-  title: string
-  color?: string
-  open?: boolean
-  textStyle?: StyleProp<TextStyle>
-  viewStyle?: StyleProp<ViewStyle>
+  title: string;
+  color?: string;
+  open?: boolean;
+  textStyle?: StyleProp<TextStyle>;
+  viewStyle?: StyleProp<ViewStyle>;
   onPress?: () => void
 }
 
-const ButtonStatusIssue = memo<ButtonStatusIssueT>(
-  ({ title, open, textStyle, viewStyle, onPress }) => {
+const ButtonStatusIssue = memo(({ title, open, textStyle, viewStyle, onPress } : ButtonStatusIssueT) => {
     const { h, container } = styles
     return (
       <View

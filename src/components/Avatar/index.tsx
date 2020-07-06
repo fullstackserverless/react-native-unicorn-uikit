@@ -81,13 +81,13 @@ const styles = StyleSheet.create({
 type sizeType = 'xLarge' | 'large' | 'medium' | 'small'
 
 interface AvatarT {
-  uri: string
-  onPress?: () => void
-  size?: sizeType
+  uri?: string;
+  onPress?: () => void;
+  size?: sizeType;
   viewStyle?: StyleProp<ViewStyle>
 }
 
-const Avatar = memo<AvatarT>(({ uri, size = 'large', onPress, viewStyle }) => {
+const Avatar = memo(({ uri, size = 'large', onPress, viewStyle }: AvatarT) => {
   const {
     container,
     small,

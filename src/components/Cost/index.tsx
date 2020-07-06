@@ -23,11 +23,11 @@ const styles = StyleSheet.create({
 })
 
 interface CostT {
-  title: string
+  title: string;
   viewStyle?: StyleProp<ViewStyle>
 }
 
-const Cost = memo<CostT>(({ title, viewStyle }) => {
+const Cost = memo(({ title, viewStyle } : CostT) => {
   const { container } = styles
   return (
     <View style={[container, viewStyle]}>

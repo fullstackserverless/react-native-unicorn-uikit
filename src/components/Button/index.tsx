@@ -35,15 +35,14 @@ const styles = StyleSheet.create({
 })
 
 interface ButtonT {
-  title: string
-  cancel?: boolean
-  disabled?: boolean
-  onPress?: () => void
+  title: string;
+  cancel?: boolean;
+  disabled?: boolean;
+  onPress?: () => void;
   textStyle?: StyleProp<TextStyle>
 }
 
-const Button = memo<ButtonT>(
-  ({ title, onPress, textStyle, cancel, disabled }) => {
+const Button = memo(({ title, onPress, textStyle, cancel, disabled }: ButtonT) => {
     const { container, sub, h } = styles
 
     return (

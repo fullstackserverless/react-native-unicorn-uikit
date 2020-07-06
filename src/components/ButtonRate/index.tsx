@@ -29,12 +29,12 @@ const styles = StyleSheet.create({
 })
 
 interface ButtonRateT {
-  title: string
-  viewStyle?: StyleProp<ViewStyle>
+  title?: string;
+  viewStyle?: StyleProp<ViewStyle>;
   onPress?: () => void
 }
 
-const ButtonRate = memo<ButtonRateT>(({ title, onPress, viewStyle }) => {
+const ButtonRate = memo(({ title, onPress, viewStyle }: ButtonRateT) => {
   const { container, sub, emoji, h } = styles
   return (
     <TouchableOpacity onPress={onPress} style={[container, viewStyle]}>

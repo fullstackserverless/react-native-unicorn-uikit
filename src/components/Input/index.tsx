@@ -31,15 +31,15 @@ const styles = StyleSheet.create({
 })
 
 interface InputT {
-  name?: string
-  value?: string
-  placeholder?: string
-  errors?: object
-  touched?: object
-  onChangeText?: () => void
-  onBlur?: () => void
-  multiline?: boolean
-  numberOfLines?: number
+  name?: string;
+  value?: string;
+  placeholder?: string;
+  errors?: any;
+  touched?: any;
+  onChangeText?: () => void;
+  onBlur?: () => void;
+  multiline?: boolean;
+  numberOfLines?: number;
   keyboardType?: // eslint-disable-line
   | 'default'
     | 'email-address'
@@ -53,8 +53,8 @@ interface InputT {
     | 'decimal-pad'
     | 'twitter'
     | 'web-search'
-    | 'visible-password'
-  secureTextEntry?: boolean
+    | 'visible-password';
+  secureTextEntry?: boolean;
   autoCapitalize?: 'none' | 'sentences' | 'words' | 'characters'
 }
 

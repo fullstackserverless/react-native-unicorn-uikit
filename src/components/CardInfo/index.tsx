@@ -3,18 +3,20 @@ import { CardBorder } from '../CardBorder'
 import { Txt } from '../Txt'
 import { Space } from '../Space'
 
+interface ObjType {
+    position: string;
+    language: string;
+    stack: string;
+    experience: string;
+    salary: number;
+}
+
 interface CardInfoT {
-  obj?: {
-    position: string
-    language: string
-    stack: string
-    experience: string
-    salary: number
-  }
+  obj: ObjType;
   bool?: boolean
 }
 
-const CardInfo = memo<CardInfoT>(({ obj, bool = true }) => {
+const CardInfo = memo(({ obj, bool = true }: CardInfoT) => {
   const { position, language, stack, experience, salary } = obj
   const info = (
     <>

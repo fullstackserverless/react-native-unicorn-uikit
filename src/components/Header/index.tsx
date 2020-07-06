@@ -50,14 +50,16 @@ const styles = StyleSheet.create({
 })
 
 interface HeaderT {
-  iconLeft?: string
-  iconRight?: string
-  onPress?: () => void
+  title?: string;
+  colorLeft?: string;
+  colorRight?: string;
+  iconLeft?: string;
+  iconRight?: string;
+  onPress?: () => void;
   onPressRight?: () => void
 }
 
-const Header = memo<HeaderT>(
-  ({ iconLeft, iconRight, onPress, onPressRight }) => {
+const Header = memo(({ title, colorLeft, colorRight, iconLeft, iconRight, onPress, onPressRight }: HeaderT) => {
     const { container, iconLeftStyle, rightIconStyle } = styles
     const { dark } = useTheme()
     const color = dark ? primary : secondary

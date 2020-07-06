@@ -23,12 +23,12 @@ const styles = StyleSheet.create({
 })
 
 interface CardBorderT {
-  children?: React.ReactNode
-  viewStyle?: StyleProp<ViewStyle>
+  children?: React.ReactNode;
+  viewStyle?: StyleProp<ViewStyle>;
   border?: boolean
 }
 
-const CardBorder = memo<CardBorderT>(({ children, viewStyle, border }) => {
+const CardBorder = memo(({ children, viewStyle, border }: CardBorderT) => {
   const { containerBlue, containerPink } = styles
   const borderColor = border ? 'transparent' : primary
   return (

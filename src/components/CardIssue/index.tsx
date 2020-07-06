@@ -13,19 +13,21 @@ const styles = StyleSheet.create({
   }
 })
 
+interface ObjType {
+  title: string;
+  description: string;
+  uri: string;
+  name: string;
+  comments: number;
+  rate: number;
+}
+
 interface Props {
-  obj?: {
-    title: string
-    description: string
-    uri: string
-    name: string
-    comments: number
-    rate: number
-  }
+  obj: ObjType;
   onPress?: () => void
 }
 
-const CardIssue = memo<Props>(({ obj, onPress }) => {
+const CardIssue = memo(({ obj, onPress } : Props) => {
   const { container } = styles
   const { title, description, name, comments, uri, rate } = obj
   return (

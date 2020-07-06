@@ -29,13 +29,13 @@ const styles = StyleSheet.create({
 })
 
 interface ButtonCircleT {
-  color?: string
-  title: string
-  onPress?: () => void
+  color?: string;
+  title: string;
+  onPress?: () => void;
   textStyle?: StyleProp<TextStyle>
 }
 
-const ButtonCircle = memo<ButtonCircleT>(({ onPress, title, textStyle }) => {
+const ButtonCircle = memo(({ onPress, title, textStyle }: ButtonCircleT) => {
   const { buttonStyle, h3 } = styles
   const { dark } = useTheme()
   return (

@@ -3,17 +3,19 @@ import { CardBorder } from '../CardBorder'
 import { Txt } from '../Txt'
 import { Space } from '../Space'
 
-interface CardCareerT {
-  obj?: {
-    institution: string
-    start: string
-    finish: string
-    description: string
-    link: string
-  }
+interface ObjType {
+  institution: string;
+  start: string;
+  finish: string;
+  description: string;
+  link: string;
 }
 
-const CardCareer = memo<CardCareerT>(({ obj }) => {
+interface CardCareerT {
+  obj: ObjType
+}
+
+const CardCareer = memo(({ obj } : CardCareerT) => {
   const { institution, start, finish, description } = obj
   return (
     <>

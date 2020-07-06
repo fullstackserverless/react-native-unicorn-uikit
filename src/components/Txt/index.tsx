@@ -184,25 +184,25 @@ const styles = ScaledSheet.create({
 })
 
 interface TxtT {
-  h0?: boolean
-  h1?: boolean
-  h2?: boolean
-  h3?: boolean
-  h4?: boolean
-  h5?: boolean
-  h6?: boolean
-  h7?: boolean
-  h8?: boolean
-  h9?: boolean
-  body?: boolean
-  title: string
-  numberOfLines?: number
-  ellipsizeMode?: 'head' | 'middle' | 'tail' | 'clip'
-  textStyle?: StyleProp<TextStyle>
+  h0?: boolean;
+  h1?: boolean;
+  h2?: boolean;
+  h3?: boolean;
+  h4?: boolean;
+  h5?: boolean;
+  h6?: boolean;
+  h7?: boolean;
+  h8?: boolean;
+  h9?: boolean;
+  body?: boolean;
+  title: string;
+  numberOfLines?: number;
+  ellipsizeMode?: 'head' | 'middle' | 'tail' | 'clip';
+  textStyle?: StyleProp<TextStyle>;
   viewStyle?: StyleProp<ViewStyle>
 }
 
-const Txt = memo<TxtT>(
+const Txt = memo(
   ({
     h0,
     h1,
@@ -219,7 +219,7 @@ const Txt = memo<TxtT>(
     textStyle,
     numberOfLines,
     ellipsizeMode
-  }) => {
+  }: TxtT) => {
     const { dark } = useTheme()
     const {
       h0Style,

@@ -4,17 +4,18 @@ import { ButtonLink } from '../ButtonLink'
 import { Txt } from '../Txt'
 import { Space } from '../Space'
 
+interface ObjType {
+  institution: string;
+  start: string;
+  finish: string;
+  description: string;
+  link: string
+}
 interface CardEducationT {
-  obj?: {
-    institution: string
-    start: string
-    finish: string
-    description: string
-    link: string
-  }
+  obj: ObjType
 }
 
-const CardEducation = memo<CardEducationT>(({ obj }) => {
+const CardEducation = memo(({ obj }: CardEducationT) => {
   const { institution, start, finish, description, link } = obj
   return (
     <>
