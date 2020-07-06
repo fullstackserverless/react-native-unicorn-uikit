@@ -25,7 +25,8 @@ const styles = StyleSheet.create({
     marginRight: 5
   },
   rateStyle: {
-    marginTop: Platform.OS === 'ios' ? 3 : 0
+    marginTop: Platform.OS === 'ios' ? 3 : 0,
+    right: 10
   }
 })
 

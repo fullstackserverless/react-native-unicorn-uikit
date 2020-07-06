@@ -12,6 +12,7 @@ import { Txt } from '../Txt'
 
 const styles = StyleSheet.create({
   container: {
+    marginLeft: 10,
     alignSelf: 'center'
   },
   sub: {
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
     marginBottom: 0
   },
   h: {
-    width: 50,
+    width: 80,
     top: Platform.OS === 'ios' ? 4 : 5,
     paddingLeft: 6
   }

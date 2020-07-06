@@ -27,17 +27,17 @@ import {
 
 const styles = ScaledSheet.create({
   h0Style: {
-    fontSize: Platform.OS === 'ios' ? '35@s' : '45@s',
+    fontSize: Platform.OS === 'ios' ? '35@s' : '35@s',
     fontFamily: Etna,
     color: secondary
   },
   h0StyleDark: {
-    fontSize: Platform.OS === 'ios' ? '35@s' : '45@s',
+    fontSize: Platform.OS === 'ios' ? '35@s' : '35@s',
     fontFamily: Etna,
     color: primary
   },
   h1Style: {
-    fontSize: Platform.OS === 'ios' ? '15@s' : '20@s',
+    fontSize: Platform.OS === 'ios' ? '15@s' : '15@s',
     fontFamily: KLMN,
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 1,
@@ -45,7 +45,7 @@ const styles = ScaledSheet.create({
     color: black
   },
   h1StyleDark: {
-    fontSize: Platform.OS === 'ios' ? '15@s' : '20@s',
+    fontSize: Platform.OS === 'ios' ? '15@s' : '15@s',
     fontFamily: KLMN,
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 1,
@@ -159,10 +159,10 @@ const styles = ScaledSheet.create({
     textAlign: 'left',
     ...ifIphoneX(
       {
-        fontSize: Platform.OS === 'ios' ? '13@s' : '17@s'
+        fontSize: Platform.OS === 'ios' ? '13@s' : '13@s'
       },
       {
-        fontSize: Platform.OS === 'ios' ? '13@s' : '17@s'
+        fontSize: Platform.OS === 'ios' ? '13@s' : '13@s'
       }
     ),
     fontFamily: KLMN,
@@ -172,10 +172,10 @@ const styles = ScaledSheet.create({
     textAlign: 'left',
     ...ifIphoneX(
       {
-        fontSize: Platform.OS === 'ios' ? '13@s' : '15@s'
+        fontSize: Platform.OS === 'ios' ? '13@s' : '13@s'
       },
       {
-        fontSize: Platform.OS === 'ios' ? '13@s' : '15@s'
+        fontSize: Platform.OS === 'ios' ? '13@s' : '13@s'
       }
     ),
     fontFamily: KLMN,

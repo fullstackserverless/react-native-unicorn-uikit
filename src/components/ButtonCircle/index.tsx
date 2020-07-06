@@ -1,5 +1,6 @@
 import React, { memo, useState } from 'react'
 import {
+  Platform,
   StyleSheet,
   StyleProp,
   TextStyle,
@@ -38,13 +39,14 @@ interface ButtonCircleT {
 const ButtonCircle = memo<ButtonCircleT>(({ onPress, title, textStyle }) => {
   const { buttonStyle, h3 } = styles
   const { dark } = useTheme()
+  const backgroundColor = Platform.OS === 'ios' ? black : '#202121'
   return (
     <TouchableOpacity onPress={onPress}>
       <View
         style={[
           buttonStyle,
           {
-            backgroundColor: dark ? black : white,
+            backgroundColor: dark ? backgroundColor : white,
             shadowColor: dark ? primary : secondary
           }
         ]}

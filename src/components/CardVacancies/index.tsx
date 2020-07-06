@@ -1,5 +1,5 @@
 import React, { memo, useState } from 'react'
-import { View, StyleSheet, TouchableOpacity } from 'react-native'
+import { Platform, View, StyleSheet, TouchableOpacity } from 'react-native'
 import { Txt } from '../Txt'
 import { CardBorder } from '../CardBorder'
 import { Star } from '../Star'
@@ -11,6 +11,9 @@ const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between'
+  },
+  h: {
+    right: Platform.OS === 'ios' ? 0 : 10
   }
 })
 
@@ -27,7 +30,7 @@ interface CardVacanciesT {
 
 const CardVacancies = memo<CardVacanciesT>(({ obj, onPress, detail }) => {
   const { position, description, owner, rate } = obj
-  const { container } = styles
+  const { h, container } = styles
   const [star, setStar] = useState(false)
   return (
     <>
@@ -57,7 +60,7 @@ const CardVacancies = memo<CardVacanciesT>(({ obj, onPress, detail }) => {
             textStyle={{ width: W - 140 }}
             numberOfLines={1}
           />
-          <Txt h7 title={`$ ${rate}`} />
+          <Txt h7 title={`$ ${rate}`} textStyle={h} />
         </View>
       </CardBorder>
     </>

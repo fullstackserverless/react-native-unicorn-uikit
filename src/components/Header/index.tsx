@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { TouchableOpacity, View, StyleSheet } from 'react-native'
+import { Platform, TouchableOpacity, View, StyleSheet } from 'react-native'
 import { ifIphoneX } from 'react-native-iphone-x-helper'
 import { useTheme } from '@react-navigation/native'
 import Fontisto from 'react-native-vector-icons/Fontisto'
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
   iconLeftStyle: {
     fontSize: 35,
-    paddingLeft: 10,
+    left: Platform.OS === 'ios' ? 10 : 25,
     ...ifIphoneX(
       {
         paddingTop: 65

@@ -25,9 +25,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center'
   },
   h: {
-    width: W - 120,
-    paddingTop: Platform.OS === 'ios' ? 15 : 5,
-    paddingBottom: 10,
+    width: W - (Platform.OS === 'ios' ? 150 : 180),
+    paddingTop: Platform.OS === 'ios' ? 15 : 0,
+    paddingBottom: 7,
     textAlign: 'center',
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 1
