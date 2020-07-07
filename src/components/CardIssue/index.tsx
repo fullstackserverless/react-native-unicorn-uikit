@@ -14,40 +14,29 @@ const styles = StyleSheet.create({
 })
 
 interface ObjType {
-  title: string;
-  description: string;
-  uri: string;
-  name: string;
-  comments: number;
-  rate: number;
+  title: string
+  description: string
+  uri: string
+  name: string
+  comments: number
+  rate: number
 }
 
 interface Props {
-  obj: ObjType;
+  obj: ObjType
   onPress?: () => void
 }
 
-const CardIssue = memo(({ obj, onPress } : Props) => {
+const CardIssue = memo(({ obj, onPress }: Props) => {
   const { container } = styles
   const { title, description, name, comments, uri, rate } = obj
   return (
     <>
       <CardBorder>
         <TouchableOpacity onPress={onPress}>
-          <Txt
-            h1
-            title={title}
-            viewStyle={{ marginTop: 25 }}
-            numberOfLines={1}
-            ellipsizeMode="tail"
-          />
+          <Txt h1 title={title} viewStyle={{ marginTop: 25 }} numberOfLines={1} ellipsizeMode="tail" />
           <Space height={10} />
-          <Txt
-            body
-            title={description}
-            numberOfLines={4}
-            ellipsizeMode="tail"
-          />
+          <Txt body title={description} numberOfLines={4} ellipsizeMode="tail" />
           <Space height={15} />
         </TouchableOpacity>
         <ButtonComments title={comments} viewStyle={{ paddingLeft: 5 }} />

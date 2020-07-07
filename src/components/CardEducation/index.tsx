@@ -5,10 +5,10 @@ import { Txt } from '../Txt'
 import { Space } from '../Space'
 
 interface ObjType {
-  institution: string;
-  start: string;
-  finish: string;
-  description: string;
+  institution: string
+  start: string
+  finish: string
+  description: string
   link: string
 }
 interface CardEducationT {

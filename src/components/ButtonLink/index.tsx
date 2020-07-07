@@ -1,10 +1,5 @@
 import React, { memo } from 'react'
-import {
-  StyleSheet,
-  StyleProp,
-  ViewStyle,
-  TouchableOpacity
-} from 'react-native'
+import { StyleSheet, StyleProp, ViewStyle, TouchableOpacity } from 'react-native'
 import { Txt } from '../Txt'
 
 const styles = StyleSheet.create({
@@ -19,8 +14,8 @@ const styles = StyleSheet.create({
 })
 
 interface ButtonLinkT {
-  title: string;
-  viewStyle?: StyleProp<ViewStyle>;
+  title: string
+  viewStyle?: StyleProp<ViewStyle>
   onPress?: () => void
 }
 

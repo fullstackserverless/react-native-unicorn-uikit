@@ -1,12 +1,5 @@
 import React, { memo } from 'react'
-import {
-  Platform,
-  StyleSheet,
-  StyleProp,
-  TextStyle,
-  ViewStyle,
-  View
-} from 'react-native'
+import { Platform, StyleSheet, StyleProp, TextStyle, ViewStyle, View } from 'react-native'
 import { Txt } from '../Txt'
 import { gray } from '../constants'
 
@@ -23,11 +16,11 @@ const styles = StyleSheet.create({
 })
 
 interface CostT {
-  title: string;
+  title: string
   viewStyle?: StyleProp<ViewStyle>
 }
 
-const Cost = memo(({ title, viewStyle } : CostT) => {
+const Cost = memo(({ title, viewStyle }: CostT) => {
   const { container } = styles
   return (
     <View style={[container, viewStyle]}>

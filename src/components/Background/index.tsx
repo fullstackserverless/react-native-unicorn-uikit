@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
 })
 
 interface BackgroundT {
-  uri?: string;
-  onPress?: () => void;
+  uri?: string
+  onPress?: () => void
   children?: React.ReactNode
 }
 
@@ -22,10 +22,7 @@ const Background = memo(({ children, uri, onPress }: BackgroundT) => {
   const { container, img } = styles
   return (
     <TouchableOpacity onPress={onPress} style={container}>
-      <ImageBackground
-        style={img}
-        source={uri ? { uri } : require('./background.png')}
-      >
+      <ImageBackground style={img} source={uri ? { uri } : require('./background.png')}>
         {children}
       </ImageBackground>
     </TouchableOpacity>

@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
 })
 
 interface CardBorderT {
-  children?: React.ReactNode;
-  viewStyle?: StyleProp<ViewStyle>;
+  children?: React.ReactNode
+  viewStyle?: StyleProp<ViewStyle>
   border?: boolean
 }
 
@@ -33,9 +33,7 @@ const CardBorder = memo(({ children, viewStyle, border }: CardBorderT) => {
   const borderColor = border ? 'transparent' : primary
   return (
     <View style={[containerBlue, { borderColor: secondary }]}>
-      <View style={[containerPink, viewStyle, { borderColor }]}>
-        {children}
-      </View>
+      <View style={[containerPink, viewStyle, { borderColor }]}>{children}</View>
     </View>
   )
 })

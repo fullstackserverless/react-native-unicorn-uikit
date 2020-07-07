@@ -1,12 +1,5 @@
 import React, { memo } from 'react'
-import {
-  Platform,
-  StyleSheet,
-  StyleProp,
-  TextStyle,
-  View,
-  TouchableOpacity
-} from 'react-native'
+import { Platform, StyleSheet, StyleProp, TextStyle, View, TouchableOpacity } from 'react-native'
 import { W } from '../constants'
 import { Txt } from '../Txt'
 import { primary, secondary } from '../constants'
@@ -35,34 +28,29 @@ const styles = StyleSheet.create({
 })
 
 interface ButtonT {
-  title: string;
-  cancel?: boolean;
-  disabled?: boolean;
-  onPress?: () => void;
+  title: string
+  cancel?: boolean
+  disabled?: boolean
+  onPress?: () => void
   textStyle?: StyleProp<TextStyle>
 }
 
 const Button = memo(({ title, onPress, textStyle, cancel, disabled }: ButtonT) => {
-    const { container, sub, h } = styles
+  const { container, sub, h } = styles
 
-    return (
-      <>
-        {!disabled && (
-          <TouchableOpacity onPress={onPress}>
-            <View style={[container, { borderColor: secondary }]}>
-              <View style={[sub, { borderColor: primary }]}>
-                <Txt
-                  h0
-                  textStyle={[h, textStyle, { textShadowColor: secondary }]}
-                  title={title}
-                />
-              </View>
+  return (
+    <>
+      {!disabled && (
+        <TouchableOpacity onPress={onPress}>
+          <View style={[container, { borderColor: secondary }]}>
+            <View style={[sub, { borderColor: primary }]}>
+              <Txt h0 textStyle={[h, textStyle, { textShadowColor: secondary }]} title={title} />
             </View>
-          </TouchableOpacity>
-        )}
-      </>
-    )
-  }
-)
+          </View>
+        </TouchableOpacity>
+      )}
+    </>
+  )
+})
 
 export { Button }

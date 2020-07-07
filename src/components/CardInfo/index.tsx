@@ -4,15 +4,15 @@ import { Txt } from '../Txt'
 import { Space } from '../Space'
 
 interface ObjType {
-    position: string;
-    language: string;
-    stack: string;
-    experience: string;
-    salary: number;
+  position: string
+  language: string
+  stack: string
+  experience: string
+  salary: number
 }
 
 interface CardInfoT {
-  obj: ObjType;
+  obj: ObjType
   bool?: boolean
 }
 

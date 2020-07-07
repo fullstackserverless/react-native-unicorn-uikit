@@ -1,12 +1,5 @@
 import React, { memo } from 'react'
-import {
-  StyleSheet,
-  StyleProp,
-  ImageStyle,
-  ViewStyle,
-  Image,
-  TouchableOpacity
-} from 'react-native'
+import { StyleSheet, StyleProp, ImageStyle, ViewStyle, Image, TouchableOpacity } from 'react-native'
 
 const styles = StyleSheet.create({
   starStyle: {
@@ -16,10 +9,10 @@ const styles = StyleSheet.create({
 })
 
 interface StarT {
-  star?: boolean;
-  bool?: boolean;
-  imageStyle?: StyleProp<ImageStyle>;
-  onPress?: () => void;
+  star?: boolean
+  bool?: boolean
+  imageStyle?: StyleProp<ImageStyle>
+  onPress?: () => void
   viewStyle?: StyleProp<ViewStyle>
 }
 

@@ -1,12 +1,5 @@
 import React, { memo } from 'react'
-import {
-  Platform,
-  StyleProp,
-  ViewStyle,
-  View,
-  StyleSheet,
-  TouchableOpacity
-} from 'react-native'
+import { Platform, StyleProp, ViewStyle, View, StyleSheet, TouchableOpacity } from 'react-native'
 import Emoji from 'react-native-emoji'
 import { useTheme } from '@react-navigation/native'
 import { black, white, primary, secondary } from '../constants'
@@ -43,28 +36,27 @@ const styles = StyleSheet.create({
 })
 
 interface ButtonIconCircleT {
-  uri?: string;
-  name: string;
-  onPress?: () => void;
+  uri?: string
+  name: string
+  onPress?: () => void
   viewStyle?: StyleProp<ViewStyle>
 }
 
 const ButtonIconCircle = memo(({ name, onPress, viewStyle }: ButtonIconCircleT) => {
-    const { container, pink, blue, iconBg, emoji } = styles
-    const { dark } = useTheme()
-    const backgroundColor = dark ? black : white
-    return (
-      <TouchableOpacity onPress={onPress} style={[container, viewStyle]}>
-        <View style={[blue, { backgroundColor: primary }]}>
-          <View style={[pink, { backgroundColor: secondary }]}>
-            <View style={[iconBg, { backgroundColor }]}>
-              <Emoji name={name} style={emoji} />
-            </View>
+  const { container, pink, blue, iconBg, emoji } = styles
+  const { dark } = useTheme()
+  const backgroundColor = dark ? black : white
+  return (
+    <TouchableOpacity onPress={onPress} style={[container, viewStyle]}>
+      <View style={[blue, { backgroundColor: primary }]}>
+        <View style={[pink, { backgroundColor: secondary }]}>
+          <View style={[iconBg, { backgroundColor }]}>
+            <Emoji name={name} style={emoji} />
           </View>
         </View>
-      </TouchableOpacity>
-    )
-  }
-)
+      </View>
+    </TouchableOpacity>
+  )
+})
 
 export { ButtonIconCircle }

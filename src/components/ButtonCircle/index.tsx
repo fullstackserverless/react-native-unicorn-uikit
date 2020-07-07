@@ -1,11 +1,5 @@
 import React, { memo, useState } from 'react'
-import {
-  StyleSheet,
-  StyleProp,
-  TextStyle,
-  View,
-  TouchableOpacity
-} from 'react-native'
+import { StyleSheet, StyleProp, TextStyle, View, TouchableOpacity } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 import { Txt } from '../Txt'
 import { white, black, primary, secondary } from '../constants'
@@ -29,9 +23,9 @@ const styles = StyleSheet.create({
 })
 
 interface ButtonCircleT {
-  color?: string;
-  title: string;
-  onPress?: () => void;
+  color?: string
+  title: string
+  onPress?: () => void
   textStyle?: StyleProp<TextStyle>
 }
 

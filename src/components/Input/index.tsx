@@ -2,18 +2,7 @@ import React, { memo } from 'react'
 import { TextInput, StyleSheet, Text, Platform } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 import { ScaledSheet } from 'react-native-size-matters'
-import {
-  W,
-  primary,
-  secondary,
-  gray,
-  dimGray,
-  lightGray,
-  Etna,
-  KLMN,
-  Dolbak,
-  Narrow
-} from '../constants'
+import { W, primary, secondary, gray, dimGray, lightGray, Etna, KLMN, Dolbak, Narrow } from '../constants'
 
 const styles = StyleSheet.create({
   inputStyle: {
@@ -31,15 +20,15 @@ const styles = StyleSheet.create({
 })
 
 interface InputT {
-  name?: string;
-  value?: string;
-  placeholder?: string;
-  errors?: any;
-  touched?: any;
-  onChangeText?: () => void;
-  onBlur?: () => void;
-  multiline?: boolean;
-  numberOfLines?: number;
+  name?: string
+  value?: string
+  placeholder?: string
+  errors?: any
+  touched?: any
+  onChangeText?: () => void
+  onBlur?: () => void
+  multiline?: boolean
+  numberOfLines?: number
   keyboardType?: // eslint-disable-line
   | 'default'
     | 'email-address'
@@ -53,8 +42,8 @@ interface InputT {
     | 'decimal-pad'
     | 'twitter'
     | 'web-search'
-    | 'visible-password';
-  secureTextEntry?: boolean;
+    | 'visible-password'
+  secureTextEntry?: boolean
   autoCapitalize?: 'none' | 'sentences' | 'words' | 'characters'
 }
 
@@ -104,9 +93,7 @@ const Input = memo<InputT>(
     return (
       <>
         <TextInput
-          style={ScaledSheet.create(
-            value.length === 0 ? placeholderStyle : input
-          )}
+          style={ScaledSheet.create(value.length === 0 ? placeholderStyle : input)}
           value={value}
           onChangeText={onChangeText}
           onBlur={onBlur}

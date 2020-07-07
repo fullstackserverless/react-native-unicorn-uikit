@@ -26,11 +26,7 @@ const Loading = memo<LoadingT>(({ size, animating, type }) => {
     colors: { secondary }
   } = useTheme()
   const { activityIndicator } = styles
-  return (
-    <View style={activityIndicator}>
-      {!animating && <Spinner size={size} type={type} color={secondary} />}
-    </View>
-  )
+  return <View style={activityIndicator}>{!animating && <Spinner size={size} type={type} color={secondary} />}</View>
 })
 
 export { Loading }

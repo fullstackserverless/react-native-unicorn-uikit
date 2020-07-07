@@ -15,15 +15,15 @@ const styles = StyleSheet.create({
 })
 
 interface ObjType {
-  position: string;
-  description: string;
-  owner: string;
+  position: string
+  description: string
+  owner: string
   rate: number
 }
 
 interface CardVacanciesT {
-  obj: ObjType;
-  onPress?: () => void;
+  obj: ObjType
+  onPress?: () => void
   detail?: boolean
 }
 
@@ -35,31 +35,16 @@ const CardVacancies = memo(({ obj, onPress, detail }: CardVacanciesT) => {
     <>
       <CardBorder>
         <View style={container}>
-          <Txt
-            h1
-            title={position}
-            textStyle={{ width: W - 110 }}
-            numberOfLines={1}
-          />
-          {false &&  <Star bool={star} onPress={() => setStar(!star)} /> }
-
+          <Txt h1 title={position} textStyle={{ width: W - 110 }} numberOfLines={1} />
+          {false && <Star bool={star} onPress={() => setStar(!star)} />}
         </View>
         <Space height={20} />
         <TouchableOpacity onPress={onPress}>
-          {detail ? (
-            <Txt body title={description} />
-          ) : (
-            <Txt body numberOfLines={4} title={description} />
-          )}
+          {detail ? <Txt body title={description} /> : <Txt body numberOfLines={4} title={description} />}
         </TouchableOpacity>
         <Space height={20} />
         <View style={container}>
-          <Txt
-            h7
-            title={owner}
-            textStyle={{ width: W - 140 }}
-            numberOfLines={1}
-          />
+          <Txt h7 title={owner} textStyle={{ width: W - 140 }} numberOfLines={1} />
           <Txt h7 title={`$ ${rate}`} />
         </View>
       </CardBorder>

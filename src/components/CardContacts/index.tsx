@@ -5,8 +5,8 @@ import { Txt } from '../Txt'
 import { Space } from '../Space'
 
 interface ObjType {
-  location: string;
-  web: string;
+  location: string
+  web: string
   phone: string
 }
 

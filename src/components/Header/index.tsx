@@ -50,35 +50,34 @@ const styles = StyleSheet.create({
 })
 
 interface HeaderT {
-  title?: string;
-  colorLeft?: string;
-  colorRight?: string;
-  iconLeft?: string;
-  iconRight?: string;
-  onPress?: () => void;
+  title?: string
+  colorLeft?: string
+  colorRight?: string
+  iconLeft?: string
+  iconRight?: string
+  onPress?: () => void
   onPressRight?: () => void
 }
 
 const Header = memo(({ title, colorLeft, colorRight, iconLeft, iconRight, onPress, onPressRight }: HeaderT) => {
-    const { container, iconLeftStyle, rightIconStyle } = styles
-    const { dark } = useTheme()
-    const color = dark ? primary : secondary
-    return (
-      <View style={container}>
-        {iconLeft && (
-          <TouchableOpacity onPress={onPress}>
-            <Fontisto name={iconLeft} style={iconLeftStyle} color={color} />
-          </TouchableOpacity>
-        )}
+  const { container, iconLeftStyle, rightIconStyle } = styles
+  const { dark } = useTheme()
+  const color = dark ? primary : secondary
+  return (
+    <View style={container}>
+      {iconLeft && (
+        <TouchableOpacity onPress={onPress}>
+          <Fontisto name={iconLeft} style={iconLeftStyle} color={color} />
+        </TouchableOpacity>
+      )}
 
-        {iconRight && (
-          <TouchableOpacity onPress={onPressRight}>
-            <Fontisto name={iconRight} style={rightIconStyle} color={color} />
-          </TouchableOpacity>
-        )}
-      </View>
-    )
-  }
-)
+      {iconRight && (
+        <TouchableOpacity onPress={onPressRight}>
+          <Fontisto name={iconRight} style={rightIconStyle} color={color} />
+        </TouchableOpacity>
+      )}
+    </View>
+  )
+})
 
 export { Header }

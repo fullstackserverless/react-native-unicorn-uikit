@@ -4,18 +4,18 @@ import { Txt } from '../Txt'
 import { Space } from '../Space'
 
 interface ObjType {
-  institution: string;
-  start: string;
-  finish: string;
-  description: string;
-  link: string;
+  institution: string
+  start: string
+  finish: string
+  description: string
+  link: string
 }
 
 interface CardCareerT {
   obj: ObjType
 }
 
-const CardCareer = memo(({ obj } : CardCareerT) => {
+const CardCareer = memo(({ obj }: CardCareerT) => {
   const { institution, start, finish, description } = obj
   return (
     <>

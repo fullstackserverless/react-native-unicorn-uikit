@@ -17,22 +17,22 @@ const styles = StyleSheet.create({
   }
 })
 interface ObjType {
-    title: string;
-    avatar: string;
-    cost: number;
-    rate: number
+  title: string
+  avatar: string
+  cost: number
+  rate: number
 }
 interface ObjType2 {
-    position: string;
-    language: string;
-    stack: string;
-    experience: string;
-    salary: number
+  position: string
+  language: string
+  stack: string
+  experience: string
+  salary: number
 }
 
 interface CardResumeT {
-  obj: ObjType;
-  obj2:  ObjType2;
+  obj: ObjType
+  obj2: ObjType2
   bool?: boolean
 }
 

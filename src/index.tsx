@@ -28,11 +28,7 @@ const App = () => {
                 height: 90
               }}
             >
-              <Switch
-                onValueChange={setValue}
-                value={value}
-                style={{ alignSelf: 'center', marginTop: 50 }}
-              />
+              <Switch onValueChange={setValue} value={value} style={{ alignSelf: 'center', marginTop: 50 }} />
             </View>
           )}
           <AppNavigator />

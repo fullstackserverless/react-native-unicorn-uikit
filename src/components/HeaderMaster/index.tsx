@@ -79,15 +79,7 @@ interface HeaderMasterT {
 }
 
 const HeaderMaster = memo<HeaderMasterT>(({ user }) => {
-  const {
-    container,
-    starStyle,
-    avatarStyle,
-    balloon,
-    telephone,
-    sound,
-    h1
-  } = styles
+  const { container, starStyle, avatarStyle, balloon, telephone, sound, h1 } = styles
   const { name, uri, star } = user
   return (
     <View style={container}>

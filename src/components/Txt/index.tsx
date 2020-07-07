@@ -1,29 +1,9 @@
 import React, { memo } from 'react'
-import {
-  Platform,
-  StyleProp,
-  TextStyle,
-  ViewStyle,
-  Text,
-  StyleSheet
-} from 'react-native'
+import { Platform, StyleProp, TextStyle, ViewStyle, Text, StyleSheet } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 import { ScaledSheet } from 'react-native-size-matters'
 import { ifIphoneX } from 'react-native-iphone-x-helper'
-import {
-  W,
-  white,
-  black,
-  primary,
-  secondary,
-  gray,
-  dimGray,
-  lightGray,
-  Etna,
-  KLMN,
-  Dolbak,
-  Narrow
-} from '../constants'
+import { W, white, black, primary, secondary, gray, dimGray, lightGray, Etna, KLMN, Dolbak, Narrow } from '../constants'
 
 const styles = ScaledSheet.create({
   h0Style: {
@@ -184,42 +164,26 @@ const styles = ScaledSheet.create({
 })
 
 interface TxtT {
-  h0?: boolean;
-  h1?: boolean;
-  h2?: boolean;
-  h3?: boolean;
-  h4?: boolean;
-  h5?: boolean;
-  h6?: boolean;
-  h7?: boolean;
-  h8?: boolean;
-  h9?: boolean;
-  body?: boolean;
-  title: string;
-  numberOfLines?: number;
-  ellipsizeMode?: 'head' | 'middle' | 'tail' | 'clip';
-  textStyle?: StyleProp<TextStyle>;
+  h0?: boolean
+  h1?: boolean
+  h2?: boolean
+  h3?: boolean
+  h4?: boolean
+  h5?: boolean
+  h6?: boolean
+  h7?: boolean
+  h8?: boolean
+  h9?: boolean
+  body?: boolean
+  title: string
+  numberOfLines?: number
+  ellipsizeMode?: 'head' | 'middle' | 'tail' | 'clip'
+  textStyle?: StyleProp<TextStyle>
   viewStyle?: StyleProp<ViewStyle>
 }
 
 const Txt = memo(
-  ({
-    h0,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    h7,
-    h8,
-    h9,
-    body,
-    title,
-    textStyle,
-    numberOfLines,
-    ellipsizeMode
-  }: TxtT) => {
+  ({ h0, h1, h2, h3, h4, h5, h6, h7, h8, h9, body, title, textStyle, numberOfLines, ellipsizeMode }: TxtT) => {
     const { dark } = useTheme()
     const {
       h0Style,

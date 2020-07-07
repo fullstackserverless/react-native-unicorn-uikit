@@ -1,12 +1,5 @@
 import React, { memo } from 'react'
-import {
-  Platform,
-  StyleProp,
-  ViewStyle,
-  StyleSheet,
-  TouchableOpacity,
-  View
-} from 'react-native'
+import { Platform, StyleProp, ViewStyle, StyleSheet, TouchableOpacity, View } from 'react-native'
 import Emoji from 'react-native-emoji'
 import { Txt } from '../Txt'
 
@@ -28,22 +21,21 @@ const styles = StyleSheet.create({
 })
 
 interface ButtonCommentsT {
-  title: string;
-  onPress?: () => void;
+  title: string
+  onPress?: () => void
   viewStyle?: StyleProp<ViewStyle>
 }
 
-const ButtonComments = memo(({ title, onPress, viewStyle }: ButtonCommentsT)  => {
-    const { container, sub, emoji, h4 } = styles
-    return (
-      <TouchableOpacity onPress={onPress} style={container}>
-        <View style={[sub, viewStyle]}>
-          <Emoji name=":thought_balloon:" style={emoji} />
-          <Txt h7 title={title} textStyle={h4} />
-        </View>
-      </TouchableOpacity>
-    )
-  }
-)
+const ButtonComments = memo(({ title, onPress, viewStyle }: ButtonCommentsT) => {
+  const { container, sub, emoji, h4 } = styles
+  return (
+    <TouchableOpacity onPress={onPress} style={container}>
+      <View style={[sub, viewStyle]}>
+        <Emoji name=":thought_balloon:" style={emoji} />
+        <Txt h7 title={title} textStyle={h4} />
+      </View>
+    </TouchableOpacity>
+  )
+})
 
 export { ButtonComments }

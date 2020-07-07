@@ -1,12 +1,5 @@
 import React, { memo } from 'react'
-import {
-  Platform,
-  StyleSheet,
-  TouchableOpacity,
-  View,
-  StyleProp,
-  ViewStyle
-} from 'react-native'
+import { Platform, StyleSheet, TouchableOpacity, View, StyleProp, ViewStyle } from 'react-native'
 import Emoji from 'react-native-emoji'
 import { Txt } from '../Txt'
 
@@ -29,8 +22,8 @@ const styles = StyleSheet.create({
 })
 
 interface ButtonRateT {
-  title?: string;
-  viewStyle?: StyleProp<ViewStyle>;
+  title?: string
+  viewStyle?: StyleProp<ViewStyle>
   onPress?: () => void
 }
 
@@ -40,13 +33,7 @@ const ButtonRate = memo(({ title, onPress, viewStyle }: ButtonRateT) => {
     <TouchableOpacity onPress={onPress} style={[container, viewStyle]}>
       <View style={sub}>
         <Emoji name=":unicorn_face:" style={emoji} />
-        <Txt
-          h8
-          title={String(title)}
-          textStyle={h}
-          numberOfLines={1}
-          ellipsizeMode="tail"
-        />
+        <Txt h8 title={String(title)} textStyle={h} numberOfLines={1} ellipsizeMode="tail" />
       </View>
     </TouchableOpacity>
   )

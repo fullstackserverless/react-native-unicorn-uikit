@@ -1,11 +1,11 @@
-import React, { memo } from 'react';
-import { StyleSheet, View, ScrollView, ImageBackground } from 'react-native';
+import React, { memo } from 'react'
+import { StyleSheet, View, ScrollView, ImageBackground } from 'react-native'
 // @ts-ignore
-import StatusBarAlert from 'react-native-statusbar-alert';
-import { useTheme } from '@react-navigation/native';
-import { Header } from '../Header';
-import { Space } from '../Space';
-import { Loading } from '../Loading';
+import StatusBarAlert from 'react-native-statusbar-alert'
+import { useTheme } from '@react-navigation/native'
+import { Header } from '../Header'
+import { Space } from '../Space'
+import { Loading } from '../Loading'
 
 const styles = StyleSheet.create({
   container: {
@@ -17,22 +17,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 10
   }
-});
+})
 
-const BLUE = '#00FFFF';
-const RED = '#FC2847';
+const BLUE = '#00FFFF'
+const RED = '#FC2847'
 
 interface AppContainerT {
-  flatList?: boolean;
-  iconLeft?: string;
-  onPress?: () => void;
-  onPressRight?: () => void;
-  colorLeft?: string;
-  iconRight?: string;
-  colorRight?: string;
-  children?: React.ReactNode;
-  message?: string;
-  title?: string;
+  flatList?: boolean
+  iconLeft?: string
+  onPress?: () => void
+  onPressRight?: () => void
+  colorLeft?: string
+  iconRight?: string
+  colorRight?: string
+  children?: React.ReactNode
+  message?: string
+  title?: string
   loading?: boolean
 }
 
@@ -50,9 +50,9 @@ const AppContainer = memo(
     title,
     loading = false
   }: AppContainerT) => {
-    const { container, sub } = styles;
-    const { dark } = useTheme();
-    const bg = dark ? require('./bgB.png') : require('./bgW.png');
+    const { container, sub } = styles
+    const { dark } = useTheme()
+    const bg = dark ? require('./bgB.png') : require('./bgW.png')
     return (
       <ImageBackground source={bg} style={container}>
         <StatusBarAlert
@@ -94,8 +94,8 @@ const AppContainer = memo(
           )}
         </>
       </ImageBackground>
-    );
+    )
   }
-);
+)
 
 export { AppContainer }
