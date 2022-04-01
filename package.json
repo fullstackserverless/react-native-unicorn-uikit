@@ -7,11 +7,6 @@
   "bugs": {
     "url": "https://github.com/react-native-village/react-native-unicorn/issues"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "scripts": {
     "ios": "react-native run-ios --simulator='iPhone SE'",
     "android": "react-native run-android",
@@ -19,7 +14,6 @@
     "lint-watch": "esw -w --changed src/**",
     "postinstall": "cd ./ios && pod install && cd .."
   },
-  "precommit": "lint",
   "dependencies": {
     "@react-native-community/cli-platform-ios": "^4.10.1",
     "@react-native-community/toolbar-android": "^0.1.0-rc.2",
